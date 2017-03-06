@@ -1,3 +1,3 @@
-#Machine Learning Coursera Programing Assignments
+#Machine Learning Programing Assignments
 
 
