@@ -20,16 +20,15 @@ p = zeros(size(X, 1), 1);
 %       information see 'help max'. If your examples are in rows, then, you
 %       can use max(A, [], 2) to obtain the max for each row.
 %
-
-
-
-
-
-
-
-
-
 % =========================================================================
+
+
+X2 = [ones(m,1) X]; % Adds a colum of ones for baias usint a^(1) = x;
+z2 = sigmoid(X2 * Theta1');% Hidden layer  z^(2) = Theta^(1)*a^(1)
+z2 = [ones(m,1) z2]; %bias
+z3 = sigmoid(z2 * Theta2'); % z^(3) = Theta^(2)*z^(2)
+h =  sigmoid(z3); 
+[acc, p]=max(h,[],2);
 
 
 end
